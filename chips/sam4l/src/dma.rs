@@ -28,10 +28,10 @@ struct DMARegisters {
 }
 
 /// The PDCA's base addresses in memory (Section 7.1 of manual)
-const DMA_BASE_ADDR: usize = 0x400A2000;
+pub const DMA_BASE_ADDR: usize = 0x400A2000;
 
 /// The number of bytes between each memory mapped DMA Channel (Section 16.6.1)
-const DMA_CHANNEL_SIZE: usize = 0x40;
+pub const DMA_CHANNEL_SIZE: usize = 0x40;
 
 /// Shared counter that Keeps track of how many DMA channels are currently
 /// active.

@@ -7,6 +7,7 @@ extern crate cortexm4;
 #[macro_use(static_init)]
 extern crate kernel;
 extern crate sam4l;
+extern crate crypto;
 
 use capsules::console::{self, Console};
 use capsules::nrf51822_serialization::{self, Nrf51822Serialization};
@@ -471,7 +472,14 @@ pub unsafe fn reset_handler() {
 
     let mut chip = sam4l::chip::Sam4l::new();
     chip.mpu().enable_mpu();
-
-
+    //let mut output1:i32 =crypto::Dummy_Handler(5);
+    //println!("we have {} ",output1);
+    //let mut outab:[u32;16]=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+    //crypto::test(&mut outab);
+    //if (outab[0]==12) {println!("we have "); }
+    //crypto::test1();
+    //println!("we have {} ", crypto::test1());
+    let mut res:i32=crypto::test1();
+    if (res==0) {println!("we have "); }
     kernel::main(firestorm, &mut chip, load_processes());
 }

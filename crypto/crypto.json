@@ -13,7 +13,7 @@
     "linker-is-gnu": true,
     "disable-redzone": true,
     "pre-link-args": [
-        "-mcpu=cortex-m0", "-mthumb",
+        "-mcpu=cortex-m4", "-mthumb",
         "-mfloat-abi=soft",
         "-Wl,-gc-sections",
         "-Tlayout.ld"
