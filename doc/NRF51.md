@@ -1,0 +1,1 @@
+../boards/nrf51dk/README.md

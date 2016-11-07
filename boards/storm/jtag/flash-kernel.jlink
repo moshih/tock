@@ -1,0 +1,6 @@
+r
+loadfile target/sam4l/release/storm.hex
+r
+g
+q
+
